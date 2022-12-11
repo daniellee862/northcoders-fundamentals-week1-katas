@@ -1,0 +1,23 @@
+{
+  "name": "fun-katas",
+  "version": "1.0.0",
+  "description": "## Running Order",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniellee862/fun-katas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniellee862/fun-katas/issues"
+  },
+  "homepage": "https://github.com/daniellee862/fun-katas#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
