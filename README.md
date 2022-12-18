@@ -5,20 +5,24 @@
 The running order for this block's katas is:
 
 1. `dnaPairs` - we have created the test file for this one for you
-2. `getTweetData` 
-3. `calculateDivisors` 
-4. `tillAddition` 
-5. `changeCalculator` 
-6. `sentenceToCamelCase` 
-7. `foldString` 
-8.  `pigLatin`
-9.  `morseCode` 
-10. `rotateArray` 
-11. `herdTheBabies` 
+2. `getTweetData`
+3. `calculateDivisors`
+4. `tillAddition`
+5. `changeCalculator`
+6. `sentenceToCamelCase`
+7. `foldString`
+8. `pigLatin`
+9. `morseCode`
+10. `rotateArray`
+11. `herdTheBabies`
 
 ## Instructions
 
 Each kata should be completed with full TDD.
+
+# NOTE TO SELF; DANIEL.
+
+make use of look up tables for katas requiring rulesets of more than two conditions.
 
 ## Initial Setup Instructions
 

@@ -1,4 +1,8 @@
 // Please do not change the name of this function
+
+/* # NOTE TO SELF; DANIEL.
+make use of look up tables for katas requiring rulesets of more than two conditions. */
+
 function dnaPairs(dna) {
   // Write your code here
   if (dna === "") {

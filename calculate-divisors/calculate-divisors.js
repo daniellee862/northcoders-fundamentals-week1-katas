@@ -12,6 +12,7 @@ function calculateDivisors(num, total) {
 
   const sortedMultiples = multiples.sort((a, b) => a - b);
 
+  //could use .reduce here
   let sum = 0;
 
   sortedMultiples.forEach((number) => (sum += number));
