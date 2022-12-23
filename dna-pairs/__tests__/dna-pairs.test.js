@@ -3,28 +3,21 @@ const dnaPairs = require("../dna-pairs.js");
 
 describe("dnaPairs()", () => {
   test("empty string input returns empty array", () => {
-    const input = "";
-    const output = [];
-    expect(dnaPairs(input)).toEqual([]);
+    expect(dnaPairs("")).toEqual([]);
   });
 
   test("single base char returns a pair within nested array", () => {
-    const input = "A";
-    const output = [["A", "T"]];
-
-    expect(dnaPairs(input)).toEqual(output);
+    expect(dnaPairs("A")).toEqual(["A", "T"]);
   });
 
   test("multi base charachters returns nested array", () => {
-    const input = "ATAG";
     const output = [
       ["A", "T"],
       ["T", "A"],
       ["A", "T"],
       ["G", "C"],
     ];
-
-    expect(dnaPairs(input)).toEqual(output);
+    expect(dnaPairs("ATAG")).toEqual(output);
   });
 
   test("check returned array is same length as input string", () => {

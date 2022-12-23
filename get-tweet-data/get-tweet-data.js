@@ -2,10 +2,8 @@
 function getTweetData(tweet) {
   // Your code here
   const tweetLength = tweet.length;
-  const mentionRegex = /\B@\w+/g;
-  const mentions = tweet.match(mentionRegex);
-  const tagRegex = /\B#\w+/g;
-  const tags = tweet.match(tagRegex);
+  const mentions = tweet.match(/\B@\w+/g);
+  const tags = tweet.match(/\B#\w+/g);
 
   return tweet.length === 0
     ? {

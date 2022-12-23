@@ -2,35 +2,8 @@ const getTweetData = require("../get-tweet-data");
 
 //ARRANGE. ACT. ASSERT.
 
-//toBe - same object/refernce
-//toEqual - to be equal to, but not the same instance.
-
-//test for return of new value
-// test('returns a new array', () => {
-//   const input = ['a', 'b', 'c'];
-//   const returnValue = createNewPeople(input);
-//   expect(input).not.toBe(returnValue);
-// });
-
-//test for non mutation of input
-// test('does not mutate the input array', () => {
-//   const input = ['a', 'b', 'c'];
-//   createNewPeople(input);
-//   expect(input).toEqual(['a', 'b', 'c']);
-// });
-
-//test list
-// empty string input returns object with keys but all values are zero
-// input string only return object with length value
-// input string with 1 mention return object with mention, mention count and length
-// input string with 1 mention and 1 tag to return object with mention, mention count, tag, tag count and length
-// input string with multiple mentions and tags to return object with all data
-//check for new value
-// test for mutated input
-
 describe("get-tweet-data tests", () => {
   test("empty string input returns object with keys but all values are zero", () => {
-    const input = "";
     const outputValue = {
       tags: [],
       mentions: [],
@@ -38,11 +11,10 @@ describe("get-tweet-data tests", () => {
       mentionCount: 0,
       length: 0,
     };
-    expect(getTweetData(input)).toEqual(outputValue);
+    expect(getTweetData("")).toEqual(outputValue);
   });
 
   test("input string only return object with length value", () => {
-    const input = "I love testing";
     const outputValue = {
       tags: [],
       mentions: [],
@@ -50,11 +22,10 @@ describe("get-tweet-data tests", () => {
       mentionCount: 0,
       length: 14,
     };
-    expect(getTweetData(input)).toEqual(outputValue);
+    expect(getTweetData("I love testing")).toEqual(outputValue);
   });
 
   test("input string with 1 mention return object with mention, mention count and length", () => {
-    const input = "My awesome tweet to @northcoders";
     const outputValue = {
       tags: [],
       mentions: ["@northcoders"],
@@ -62,7 +33,9 @@ describe("get-tweet-data tests", () => {
       mentionCount: 1,
       length: 32,
     };
-    expect(getTweetData(input)).toEqual(outputValue);
+    expect(getTweetData("My awesome tweet to @northcoders")).toEqual(
+      outputValue
+    );
   });
 
   test("input string with 1 mention and 1 tag to return object with mention, mention count, tag, tag count and length", () => {
