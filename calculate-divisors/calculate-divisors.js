@@ -1,23 +1,16 @@
 // Please do not change the name of this function
-function calculateDivisors(num, total) {
+function calculateDivisors(num) {
   // Your code here
 
-  let multiples = [];
+  let sum = 0;
 
   for (let i = num - 1; i > 0; i--) {
     if (i % 3 === 0 || i % 5 === 0) {
-      multiples.push(i);
+      sum += i;
     }
   }
 
-  const sortedMultiples = multiples.sort((a, b) => a - b);
-
-  //could use .reduce here
-  let sum = 0;
-
-  sortedMultiples.forEach((number) => (sum += number));
-
-  return num < 4 ? 0 : total ? sum : sortedMultiples;
+  return num < 4 ? 0 : sum;
 }
 
 module.exports = calculateDivisors;
